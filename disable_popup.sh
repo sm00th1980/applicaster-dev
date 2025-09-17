@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 FILE="./packages/quick-brick-core/App/index.tsx"
 
