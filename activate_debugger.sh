@@ -13,7 +13,7 @@ if [ ! -f "$FILE" ]; then
   exit 1
 fi
 
-# Replace line in place
-sed -i.bak 's/const IS_DEBUGGER_ENABLED = false;/const IS_DEBUGGER_ENABLED = true;/' "$FILE"
+# Replace line in place without backup
+sed -i 's/const IS_DEBUGGER_ENABLED = false;/const IS_DEBUGGER_ENABLED = true;/' "$FILE"
 
-echo "✅ Updated debugger flag in $FILE (backup saved as $FILE.bak)"
+echo "✅ Activated debugger flag in $FILE"
