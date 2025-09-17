@@ -1,6 +1,6 @@
 #!/bin/bash
 
-FILE = "packages/quick-brick-core/App/index.tsx"
+FILE="./packages/quick-brick-core/App/index.tsx"
 
 if [ -z "$FILE" ]; then
   echo "❌ Please provide a file path."
