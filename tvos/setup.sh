@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# Disabling popups - START
+
 FILE_FOR_DISABLE_POPUPS="./packages/quick-brick-core/App/index.tsx"
 
 if [ -z "$FILE_FOR_DISABLE_POPUPS" ]; then
@@ -32,6 +34,10 @@ mv "$TMP_FILE_FOR_DISABLE_POPUPS" "$FILE_FOR_DISABLE_POPUPS"
 
 echo "✅ Added LogBox ignore code to top of $FILE_FOR_DISABLE_POPUPS"
 
+# Disabling popups - END
+
+# Activate debugger - START
+
 FILE_FOR_ACTIVATE_DEBUGGER="./packages/zapp-react-native-tvos-app/InteractionManager/index.ts"
 
 if [ -z "$FILE_FOR_ACTIVATE_DEBUGGER" ]; then
@@ -49,3 +55,5 @@ fi
 sed -i '' 's/const IS_DEBUGGER_ENABLED = false;/const IS_DEBUGGER_ENABLED = true;/' "$FILE_FOR_ACTIVATE_DEBUGGER"
 
 echo "✅ Activated debugger flag in $FILE_FOR_ACTIVATE_DEBUGGER"
+
+# Activate debugger - END
